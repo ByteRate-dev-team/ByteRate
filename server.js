@@ -1,5 +1,5 @@
- html_page_dir = '/mnt/c/Personals/ByteRate/html_pages/'
- css_page_dir = '/mnt/c/Personals/ByteRate/css_styles/'
+html_page_dir = '/mnt/c/Personals/ByteRate/html_pages/'
+css_page_dir = '/mnt/c/Personals/ByteRate/css_styles/'
 const express = require('express')
 const app = express()
 const port = 3000
