@@ -1,10 +1,25 @@
 .title {
-    color: #3C4142;
-    margin-top: 5%;
-    margin-left: 70%;
+    color: gray;
+    margin-top: 10%;
+    margin-left: 60%;
     animation: slide_me 0.8s ease-in;
     font-family: "Times New Roman", Times, serif;
 }
+
+.left_panel {
+    background-color: silver;
+    color:gray;
+    margin-top: 5%;
+    margin-left: 5%;
+    height:400px;
+    width:300px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.center {
+    text-align: center;
+}
+
 
 h1 {
     background-color: black;
@@ -23,9 +38,11 @@ body {
     color:gray
 }
 
+
+/* key frames = animations - this animates the slide in of the title */
 @keyframes slide_me {
     0%{
-        transform: skewX(53deg) translateX(-800px);
+        transform: skewX(53deg) translateX(-700px);
     }
 
     100%{
