@@ -1,22 +1,43 @@
-.title {
+.header {
+    color:gray;
+    text-align: center;
+    background-color: silver;
+}
+
+
+.slide_in {
     color: gray;
-    margin-top: 10%;
+    margin-top: 0%;
     margin-left: 60%;
     animation: slide_me 0.8s ease-in;
     font-family: "Times New Roman", Times, serif;
 }
 
-.left_panel {
+
+.container {
+    display:flex;
+    column-gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.small_panel {
     background-color: silver;
     color:gray;
-    margin-top: 5%;
-    margin-left: 5%;
-    height:400px;
-    width:300px;
+    height: 400px;
+    width: 300px;
     font-family: "Times New Roman", Times, serif;
 }
 
-.center {
+.large_panel {
+    background-color: silver;
+    color: gray;
+    height: 500px;
+    width: 600px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.center_text {
     text-align: center;
 }
 
@@ -37,7 +58,17 @@ body {
     background-color: black;
     color:gray
 }
+button {
+    top:90%;
+    margin: auto;
+    display: block;
+}
 
+.footer {
+    background-color: silver;
+    color: gray;
+    text-align: center;
+}
 
 /* key frames = animations - this animates the slide in of the title */
 @keyframes slide_me {

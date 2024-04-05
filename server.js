@@ -2,7 +2,7 @@ html_page_dir = '/mnt/c/Personals/ByteRate/html_pages/'
 css_page_dir = '/mnt/c/Personals/ByteRate/css_styles/'
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3002
 
 // Send homepage html file upon entering website
 app.get('/', (req, res) => {
