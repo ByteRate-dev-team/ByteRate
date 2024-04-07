@@ -1,0 +1,182 @@
+.header {
+    color:gray;
+    text-align: center;
+    background-color: silver;
+}
+
+
+.slide_in {
+    color: gray;
+    margin-top: 0%;
+    margin-left: 60%;
+    animation: slide_me 0.8s ease-in;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+.container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.small_panel {
+    margin: 25px 25px;
+    background-color: silver;
+    color:gray;
+    height: 400px;
+    width: 300px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.large_panel {
+    margin: 50px 50px;
+    background-color: silver;
+    color: gray;
+    height: 500px;
+    width: 600px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.center_text {
+    text-align: center;
+    display: inline-block;
+}
+
+
+h1 {
+    background-color: black;
+    color: gray;
+    text-align: center;
+}
+
+h1 + p  {
+    background-color: black;
+    color: gray;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    color:gray
+}
+button {
+    top:90%;
+    margin: auto;
+    display: block;
+}
+
+.footer {
+    background-color: silver;
+    color: gray;
+    text-align: center;
+}
+
+.modal {
+    /* DOESN'T MOVE WHEN SCROLLING */
+    position: relative;
+  
+    /* CENTER AT MIDDLE OF SCREEN*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+   
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    /* keep above grayed out section */
+    z-index: 10;
+    
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    transition: 200ms ease-in-out;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+
+}
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .close_button {
+    position: absolute;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bold;
+    top:0;
+    right:0;
+}
+
+.modal-header .title {
+    margin: 0 auto;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* spaces out header from rest of modal*/
+.modal-body {
+    padding: 10px 15px
+}
+
+.modal-body.label {
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.modal-footer {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid black;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* when overlay invisible click events not captured */
+    pointer-events: none;
+
+    transition: 200ms ease-in-out;
+
+}
+
+#overlay.active{ 
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* key frames = animations - this animates the slide in of the title */
+@keyframes slide_me {
+    0%{
+        transform: skewX(53deg) translateX(-700px);
+    }
+
+    100%{
+        transition: skewX(0deg);
+
+    }
+    
+}
