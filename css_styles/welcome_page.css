@@ -78,7 +78,6 @@ button {
 .modal {
     /* DOESN'T MOVE WHEN SCROLLING */
     position: relative;
-  
     /* CENTER AT MIDDLE OF SCREEN*/
     top: 50%;
     left: 50%;
@@ -146,6 +145,36 @@ button {
     align-items: center;
     border-top: 1px solid black;
 }
+
+.modal-footer .button {
+    display: flex;
+    flex: 0 0 auto;
+    align-items:center;
+    font-family: inherit;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+}
+.modal-footer .close_button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+  }
+  
+.modal-footer .close_button:active {
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+  }
 
 #overlay {
     position: fixed;
