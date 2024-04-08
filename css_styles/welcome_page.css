@@ -131,6 +131,10 @@ button {
     padding: 10px 15px
 }
 
+.form {
+    padding: 5px 5px;
+}
+
 .modal-body.label {
     position: absolute;
     left: 50%;

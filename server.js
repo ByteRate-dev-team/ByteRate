@@ -5,6 +5,8 @@ const express = require('express')
 const app = express()
 const port = 3004
 
+app.use(express.urlencoded({ extended: true }));
+
 // Send homepage html file upon entering website
 app.get('/', (req, res) => {
     res.sendFile(html_page_dir + 'welcome_page.html')
@@ -24,6 +26,8 @@ app.get('/welcome_page.js', (req, res) => {
 // send review from browser to server when submitted
 app.post('/add_rest', (req, res) => {
     console.log("RECIEVED A NEW REVIEW")
+    const review_data = req.body
+    console.log(JSON.stringify(review_data))
 })
 
 app.listen(port, () => {
