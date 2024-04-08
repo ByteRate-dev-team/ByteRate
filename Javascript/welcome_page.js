@@ -52,13 +52,10 @@ function add_dish(form){
     console.log(total_dishes)
     total_dishes += 1
 
-    form.appendChild(line_break())
+
     form.appendChild(constructLabel('dish_name'))
-    form.appendChild(line_break())
     form.appendChild(constructInput('dish_name'))
-    form.appendChild(line_break())
     form.appendChild(constructLabel('dish_rating'))
-    form.appendChild(line_break())
     form.appendChild(constructInput('dish_rating'))
 }
 
