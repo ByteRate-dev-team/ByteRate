@@ -45,7 +45,7 @@
                 <div class="modal-header">
                     
                     <div class="title"> Enter Review: </div>
-                    <button data-close-button class="close_button"> &times; </button>
+                    <button data-close-button class="close_button" id ="remove_review"> &times; </button>
                 
                 </div>
                 
@@ -55,9 +55,9 @@
                             
                              <label class="custom_label" for="rst">Restaurant Name: </label> 
                             <input class="custom_input" type="text" id="rst" name="rst_name"> 
-                            <label class="custom_label" for="dish_nm_1"> Dish Name: </label>  
+                            <label class="custom_label" for="dish_nm_1" id="dish_nm_lbl_1"> Dish Name: </label>  
                             <input class="custom_input" type="text" id="dish_nm_1" name="dish_1_name">  
-                            <label class="custom_label" for="dish_rt_1"> Dish Rating: </label> 
+                            <label class="custom_label" for="dish_rt_1" id="dish_rt_lbl_1"> Dish Rating: </label> 
                             <input class="custom_input" type="number" id="dish_rt_1" name="dish_1_rating">
                         
                     </form>
@@ -68,11 +68,20 @@
                     <button type="submit" class="button" data-close-button form="review_form" formmethod="post" formaction="add_rest">
                         Submit Review
                     </button>
-                    <button type="button" class="button" data-add-dish>
-                        Add Dish
-                    </button>
+
+                    <div class="green"> 
+                        <button type="button" class="button" data-add-dish>
+                            &plus; Dish
+                        </button>
+                    </div>
+
+                    <div class="red">
+                            <button type="button" class="button" id="remove_review" data-remove-dish>
+                                &minus; Dish
+                            </button>
+                    </div>
+
                 </div>
-            
             </div>
         </div>
     

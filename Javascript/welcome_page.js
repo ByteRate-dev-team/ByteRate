@@ -1,6 +1,7 @@
 const open_modal_buttons = document.querySelectorAll('[data-modal-target]')
 const close_modal_buttons = document.querySelectorAll('[data-close-button]')
 const add_review_buttons = document.querySelectorAll('[data-add-dish]')
+const remove_review_buttons = document.querySelectorAll('[data-remove-dish]')
 const overlay = document.getElementById('overlay')
 total_dishes = 1
 
@@ -24,6 +25,12 @@ add_review_buttons.forEach(button => {
         const form = document.getElementById('review_form')
         add_dish(form)
 
+    })
+})
+
+remove_review_buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        remove_dish()
     })
 })
 
@@ -64,10 +71,12 @@ function constructLabel(label_type) {
     if(label_type == "dish_name") {
         new_label.innerHTML = "Dish Name:"
         new_label.for = "dish_nm_" + total_dishes
+        new_label.id = dish_name_label_id = 'dish_nm_lbl_' + total_dishes
         return new_label
     }
     new_label.innerHTML ="Dish Rating:"
     new_label.for = "dish_rt_" + total_dishes
+    new_label.id = 'dish_rt_lbl_' + total_dishes
     return new_label
 }
 
@@ -88,4 +97,26 @@ function constructInput(input_type){
 function line_break() {
     return document.createElement('br')
 
+}
+
+function remove_dish() {
+    console.log(total_dishes)
+    if(total_dishes <= 1 ) {
+        console.log('can\'t remove first dish!')
+        return
+    } 
+    console.log('removing dish!')
+
+    dish_name_label_id = 'dish_nm_lbl_' + total_dishes
+    dish_name_input_id = 'dish_nm_' + total_dishes
+
+    dish_rate_label_id = 'dish_rt_lbl_' + total_dishes
+    dish_rate_input_id = 'dish_rt_' + total_dishes
+
+    document.getElementById(dish_name_input_id).remove()
+    document.getElementById(dish_name_label_id).remove()
+    document.getElementById(dish_rate_input_id).remove()
+    document.getElementById(dish_rate_label_id).remove()
+
+    total_dishes = total_dishes - 1
 }
